@@ -1,0 +1,93 @@
+<h1>Cambio Moneda</h1>
+<form class="col-md-6">
+    <div class="row mb-2">
+        <div class="badge badge-primary text-wrap">Seleccione e ingrese datos</div>
+    </div>
+    <div class="row">
+        <div class="col col-md-2">
+            <label>Enviar</label>
+        </div>
+        <div class="form-group col col-md-5">
+            <select class="form-control" [(ngModel)]="mov.moneda_o" name="moneda_o">
+                <option value="1">Soles</option>
+                <option value="2">Dólares</option>
+            </select>
+        </div>
+        <div class="form-group col col-md-5">
+            <input type="number" class="form-control" [(ngModel)]="mov.importe_o" name="importe_o"
+                placeholder="Importe">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-md-2">
+            <label>Recibir</label>
+        </div>
+        <div class="form-group col col-md-5">
+            <select class="form-control" [(ngModel)]="mov.moneda_d" name="moneda_o">
+                <option value="1">Soles</option>
+                <option value="2">Dólares</option>
+            </select>
+        </div>
+        <div class="form-group col col-md-5"></div>
+    </div>
+    <div class="row">
+        <div class="col col-md-4"></div>
+        <div class="group-form col col-md-4">
+            <button (click)="Calcular()" class="btn btn-primary mb-2">Calcular</button>
+        </div>
+        <div class="col col-md-4"></div>
+    </div>
+    <div class="row mb-2">
+        <div class="badge badge-primary text-wrap">Resultado</div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Moneda Origen</label>
+            </div>
+            <div class="form-group col">
+                {{ ope.mon_origen_des }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Importe Origen</label>
+            </div>
+            <div class="form-group col">
+                {{ ope.imp_origen }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Moneda Cambio</label>
+            </div>
+            <div class="form-group col">
+                {{ ope.mon_destino_des }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Importe Cambio</label>
+            </div>
+            <div class="form-group col">
+                {{ ope.imp_destino }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Operación</label>
+            </div>
+            <div class="form-group col">
+                {{ ope.cambio }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label>Tipo de Cambio</label>
+            </div>
+            <div class="form-group col">
+                {{ ope.tipo_cambio }}
+            </div>
+        </div>
+    </div>
+</form>
